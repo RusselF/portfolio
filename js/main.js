@@ -27,6 +27,6 @@ const observer = new IntersectionObserver((entries) => {
 document.querySelectorAll('.fade-up').forEach(el => observer.observe(el))
 
 // Stagger cards
-document.querySelectorAll('.skill-card, .project-card').forEach((el, i) => {
-  el.style.transitionDelay = `${i * 0.05}s`
+document.querySelectorAll('.skill-card, .project-card, .experience-card, .exp-project-block').forEach((el, i) => {
+  el.style.transitionDelay = `${(i % 6) * 0.08}s`
 })
